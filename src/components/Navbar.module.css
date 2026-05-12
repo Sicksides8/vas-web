@@ -1,0 +1,205 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 0;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.scrolled {
+  position: fixed;
+  padding: 0.75rem 0;
+  background: var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep navbar visible and fixed when mobile menu is open */
+.menuOpen {
+  position: fixed;
+  background: var(--primary);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 3rem;
+}
+
+.links a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contactBtn {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.navButton {
+  background: transparent;
+  color: var(--white);
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.logoImage {
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scrolled .logoImage,
+.menuOpen .logoImage {
+  opacity: 1;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.bar1Open {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.bar2Open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.bar3Open {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── Mobile menu ── */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  background: var(--primary);
+  padding: 0 2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.mobileMenuOpen {
+  max-height: 500px;
+  padding: 0.5rem 2rem 2rem;
+}
+
+.mobileMenu a {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--white);
+  padding: 0.85rem 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.mobileDivider {
+  height: 1px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.mobileContactBtn {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 1.05rem;
+  padding: 0.75rem 0;
+  width: 100%;
+  text-align: left;
+}
+
+.mobileRegisterBtn {
+  margin-top: 0.5rem;
+  background: var(--white);
+  color: var(--primary);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    position: fixed;
+    background: var(--primary);
+    padding: 0.75rem 0;
+  }
+
+  .links,
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+}

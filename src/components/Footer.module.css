@@ -1,0 +1,148 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(520px, 56vw, 720px);
+  background: var(--white);
+  color: #303030;
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  padding-top: clamp(2rem, 5vw, 3.2rem);
+  padding-bottom: clamp(18rem, 32vw, 26rem);
+}
+
+.topLine {
+  height: 1px;
+  background: rgba(15, 28, 45, 0.55);
+  margin-bottom: clamp(1.1rem, 3vw, 2rem);
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: clamp(2.2rem, 6vw, 4rem);
+}
+
+.brandBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+.logo {
+  width: clamp(110px, 14vw, 150px);
+  height: auto;
+  object-fit: contain;
+}
+
+.brandBlock h2,
+.socialBlock h3,
+.linksBlock h3 {
+  font-family: var(--font-rethink-sans), sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0 0 0.35rem;
+  color: #222;
+}
+
+.brandBlock p {
+  margin: 0;
+  color: #555;
+  font-size: clamp(0.82rem, 1.1vw, 0.95rem);
+  line-height: 1.25;
+}
+
+.socialBlock {
+  min-width: 160px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.socials a {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #777;
+  border-radius: 50%;
+  color: #565656;
+}
+
+.legalGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(150px, 0.6fr) auto;
+  gap: clamp(1.75rem, 5vw, 5rem);
+  align-items: start;
+}
+
+.legalText {
+  max-width: 720px;
+}
+
+.legalText p,
+.linksBlock a {
+  color: #4e4e4e;
+  font-size: clamp(0.72rem, 1vw, 0.85rem);
+  line-height: 1.35;
+  margin: 0 0 0.7rem;
+}
+
+.legalText a,
+.linksBlock a {
+  font-weight: 800;
+  color: #333;
+}
+
+.unsubscribeBtn {
+  margin-top: clamp(0.9rem, 2vw, 1.35rem);
+  min-width: 150px;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1.5px solid #777;
+  color: #555;
+  background: var(--white);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.qrBlock img {
+  width: clamp(92px, 10vw, 122px);
+  height: auto;
+  display: block;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: clamp(280px, 45vw, 520px);
+  display: block;
+  object-fit: fill;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .headerRow,
+  .legalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .socialBlock {
+    min-width: 0;
+  }
+
+  .brandBlock {
+    flex-direction: column;
+  }
+}

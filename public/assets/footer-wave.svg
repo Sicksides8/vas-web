@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Footer wave: azul alto en ambos extremos, valle blanco en el centro (forma ~).
+  Misma sensación que el header wave pero cerrando la página desde abajo.
+-->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1000 300"
+     preserveAspectRatio="none"
+     xml:space="preserve">
+  <path fill="#1E91FF" d="
+    M0,300
+    L0,80
+    C160,80 280,230 500,230
+    C720,230 840,80 1000,80
+    L1000,300
+    Z
+  "/>
+</svg>

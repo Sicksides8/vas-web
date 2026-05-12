@@ -1,0 +1,252 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 104px;
+  padding-bottom: 64px;
+  /* padding-top en mobile se controla desde el media query del .container */
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.bgLogoContainer {
+  position: absolute;
+  top: 18%;
+  left: -10%;
+  width: 120%;
+  z-index: 1;
+  opacity: 0.08;
+  /* Slightly more visible as seen in the PDF */
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
+.bgLogo {
+  width: 100%;
+  height: auto;
+}
+
+.bgWatermark {
+  position: absolute;
+  top: -55%;
+  left: 5%;
+  width: 154%;
+  z-index: 2;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.bgWatermarkImg {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: start;
+  z-index: 10;
+  position: relative;
+}
+
+.logoWrapper {
+  margin-top: -1.5rem;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLogo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+.headline {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-top: calc(-1.8rem - 1cm);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  max-width: 700px;
+  font-weight: 800;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.subheadline {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--dark);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.bold {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.primaryBtn {
+  background: #1a1a1a;
+  color: var(--white);
+  padding: 1.25rem 3rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.secondaryBtn {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 1.1rem;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondaryBtn::after {
+  content: '↓';
+}
+
+.visualColumn {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Galería: hero ancho tipo “squircle” + fila de 3 (vertical + 2 circulares) */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 2vw, 1.125rem);
+  width: 100%;
+  max-width: 520px;
+}
+
+.galleryHero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 0;
+  border-radius: clamp(36px, 8vw, 56px);
+  overflow: hidden;
+  box-shadow:
+    0 28px 56px rgba(15, 28, 45, 0.14),
+    0 12px 24px rgba(15, 28, 45, 0.08);
+  background: var(--gray);
+}
+
+.galleryHeroImg {
+  object-fit: cover;
+}
+
+.galleryRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.5vw, 0.875rem);
+  align-items: end;
+  width: 100%;
+}
+
+.thumbVertical {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: clamp(18px, 3.5vw, 26px);
+  overflow: hidden;
+  box-shadow: 0 14px 32px rgba(15, 28, 45, 0.12);
+}
+
+.thumbRound {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(15, 28, 45, 0.12);
+  justify-self: center;
+  max-width: 100%;
+}
+
+.thumbImg {
+  object-fit: cover;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  position: relative;
+}
+
+.mouse::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 2px;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 80px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .logoWrapper,
+  .ctaGroup {
+    align-items: center;
+  }
+
+  .headline,
+  .subheadline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .visualColumn {
+    justify-content: center;
+    margin-top: 4rem;
+  }
+}
