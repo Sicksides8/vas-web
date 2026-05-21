@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import RulesHighlight from "@/components/RulesHighlight";
 import RegisterPromo from "@/components/RegisterPromo";
+import PreLaunchRegister from "@/components/PreLaunchRegister";
 import PeopleCollage from "@/components/PeopleCollage";
 import PlanOffers from "@/components/PlanOffers";
 import FAQ from "@/components/FAQ";
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <RulesHighlight />
         <RegisterPromo />
+        <PreLaunchRegister />
         <PeopleCollage />
         <PlanOffers />
         <FAQ />

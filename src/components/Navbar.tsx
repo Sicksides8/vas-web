@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { WHATSAPP_URL } from "@/config/site-links";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -34,14 +35,23 @@ export default function Navbar() {
         </div>
 
         <div className={styles.links}>
-          <Link href="#registrate">Registrate</Link>
+          <Link href="#pre-lanzamiento">Unirme</Link>
           <Link href="#planes">Planes</Link>
           <Link href="#faq">FAQ</Link>
         </div>
 
         <div className={styles.actions}>
-          <button className={styles.contactBtn}>Contacto</button>
-          <button className={styles.navButton}>Registrarse</button>
+          <a
+            href={WHATSAPP_URL}
+            className={styles.contactBtn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contacto
+          </a>
+          <Link href="#pre-lanzamiento" className={styles.navButton}>
+            Unirme
+          </Link>
         </div>
 
         <button
@@ -57,12 +67,28 @@ export default function Navbar() {
       </div>
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
-        <Link href="#registrate" onClick={close}>Registrate</Link>
-        <Link href="#planes" onClick={close}>Planes</Link>
-        <Link href="#faq" onClick={close}>FAQ</Link>
+        <Link href="#pre-lanzamiento" onClick={close}>
+          Unirme
+        </Link>
+        <Link href="#planes" onClick={close}>
+          Planes
+        </Link>
+        <Link href="#faq" onClick={close}>
+          FAQ
+        </Link>
         <div className={styles.mobileDivider} />
-        <button className={styles.mobileContactBtn} onClick={close}>Contacto</button>
-        <button className={styles.mobileRegisterBtn} onClick={close}>Registrarse</button>
+        <a
+          href={WHATSAPP_URL}
+          className={styles.mobileContactBtn}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={close}
+        >
+          Contacto
+        </a>
+        <Link href="#pre-lanzamiento" className={styles.mobileRegisterBtn} onClick={close}>
+          Unirme
+        </Link>
       </div>
     </nav>
   );

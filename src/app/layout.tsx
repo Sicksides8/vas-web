@@ -17,7 +17,7 @@ const calSans = localFont({
 
 export const metadata: Metadata = {
   title: "VAS - Si vas, vamos.",
-  description: "La app que te mueve sin comisiones. Registrate y ganá tu membresía.",
+  description: "La app que te mueve sin comisiones. Sumate hoy y ganá una membresía.",
 };
 
 export default function RootLayout({

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { useId, useState, type ReactNode } from "react";
+import { SOCIAL, WHATSAPP_URL } from "@/config/site-links";
 import styles from "./FAQ.module.css";
 
 type FaqItem = {
@@ -95,11 +96,25 @@ const faqs: FaqItem[] = [
       <>
         <p>
           Podés escribirnos por{" "}
-          <strong>WhatsApp</strong> (número próximo a publicarse).
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            WhatsApp
+          </a>{" "}
+          (
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            +54 9 11 6456-0326
+          </a>
+          ) o por{" "}
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+            wa.me/5491164560326
+          </a>
+          .
         </p>
         <p>
           También en nuestra página web o en nuestras redes sociales como{" "}
-          <strong>VAS Movilidad</strong>.
+          <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer">
+            <strong>VAS Movilidad</strong>
+          </a>
+          .
         </p>
       </>
     ),

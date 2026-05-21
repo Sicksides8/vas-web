@@ -160,7 +160,12 @@
   text-decoration: line-through;
 }
 
-.cardFooter button {
+.cardFooter .cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
   min-width: clamp(82px, 10vw, 104px);
   border-radius: 8px;
   background: var(--primary);
@@ -170,6 +175,12 @@
   font-size: clamp(0.92rem, 1.4vw, 1rem);
   font-weight: 800;
   box-shadow: 0 4px 10px rgba(30, 145, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardFooter .cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(30, 145, 255, 0.28);
 }
 
 @media (max-width: 760px) {
@@ -195,7 +206,7 @@
     flex-direction: column;
   }
 
-  .cardFooter button {
+  .cardFooter .cta {
     width: 100%;
   }
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Bike, CarFront, HeartHandshake } from "lucide-react";
+import { MEMBERSHIP_PROMO_COPY } from "@/config/site-links";
 import styles from "./RegisterPromo.module.css";
 
 export default function RegisterPromo() {
@@ -11,7 +12,7 @@ export default function RegisterPromo() {
             <CarFront size={34} strokeWidth={2.6} />
             <Bike size={30} strokeWidth={2.6} />
           </div>
-          <p>Registrate y podés ganar una membresía</p>
+          <p>{MEMBERSHIP_PROMO_COPY}</p>
         </div>
       </div>
 

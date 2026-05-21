@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { SOCIAL } from "@/config/site-links";
+
+const externalLinkProps = {
+  target: "_blank" as const,
+  rel: "noopener noreferrer",
+};
 
 export default function Footer() {
   return (
@@ -14,19 +20,21 @@ export default function Footer() {
             <Image src="/assets/logo.png" alt="VAS" width={170} height={70} className={styles.logo} />
             <div>
               <h2>VAS ARGENTINA</h2>
-              <p>Lavardén 157 Piso 2 201</p>
-              <p>(C1437FBC) C.A.B.A. Buenos Aires</p>
-              <p>Tel: 0800-122-0969</p>
             </div>
           </div>
 
           <div className={styles.socialBlock}>
             <h3>Seguinos</h3>
             <div className={styles.socials}>
-              <Link href="#" aria-label="Instagram"><Instagram size={18} /></Link>
-              <Link href="#" aria-label="Facebook"><Facebook size={18} /></Link>
-              <Link href="#" aria-label="Twitter"><Twitter size={18} /></Link>
-              <Link href="#" aria-label="LinkedIn"><Linkedin size={18} /></Link>
+              <Link href={SOCIAL.instagram} aria-label="Instagram" {...externalLinkProps}>
+                <Instagram size={18} />
+              </Link>
+              <Link href={SOCIAL.facebook} aria-label="Facebook" {...externalLinkProps}>
+                <Facebook size={18} />
+              </Link>
+              <Link href={SOCIAL.linkedin} aria-label="LinkedIn" {...externalLinkProps}>
+                <Linkedin size={18} />
+              </Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { MEMBERSHIP_PROMO_COPY } from "@/config/site-links";
 import styles from "./Hero.module.css";
 
 /** Hero grande = misma foto que antes era el primer círculo (AdobeStock 436683212). Miniaturas en /public/assets/gallery */
@@ -64,8 +66,12 @@ export default function Hero() {
             </p>
 
             <div className={styles.ctaGroup}>
-              <button className={styles.primaryBtn}>Registrate y ganá tu membresía</button>
-              <button className={styles.secondaryBtn}>Seguí leyendo</button>
+              <Link href="#pre-lanzamiento" className={styles.primaryBtn}>
+                {MEMBERSHIP_PROMO_COPY}
+              </Link>
+              <button type="button" className={styles.secondaryBtn}>
+                Seguí leyendo
+              </button>
             </div>
 
           </motion.div>
@@ -91,7 +97,7 @@ export default function Hero() {
             </div>
 
             <div className={styles.galleryRow}>
-              <div className={styles.thumbVertical}>
+              <div className={styles.thumbRound}>
                 <Image
                   src={galleryImages.thumbVertical}
                   alt="Personas en movilidad urbana"

@@ -1,60 +1,80 @@
 import Image from "next/image";
 import { Bike, CarFront } from "lucide-react";
+import {
+  CHECKOUT,
+  MEMBERSHIP_PROMO_COPY,
+  PRE_LAUNCH_FORM_URL,
+} from "@/config/site-links";
 import styles from "./PlanOffers.module.css";
 
-const travelerPlans = [
+type Plan = {
+  name: string;
+  tone: "blue" | "gold";
+  description: string;
+  price: string;
+  cta: string;
+  href: string;
+  oldPrice?: string;
+};
+
+const travelerPlans: Plan[] = [
   {
     name: "VAS Free",
-    tone: "blue",
-    description: "Registrate hoy y accedé a muchos descuentos y beneficios antes que nadie.",
+    tone: "blue" as const,
+    description:
+      "Sumate hoy y accedé a muchos descuentos y beneficios antes que nadie.",
     price: "ARS 0.-",
-    cta: "Registrate",
+    cta: "Unirme",
+    href: PRE_LAUNCH_FORM_URL,
   },
   {
     name: "VAS Premium",
-    tone: "blue",
+    tone: "blue" as const,
     description: "1er. viaje GRATIS. Tarifa plana Lunes a Viernes. Beneficios exclusivos VAS.",
     oldPrice: "ARS 18.000.-",
     price: "ARS 9.000.-",
-    cta: "Comprá",
+    cta: "Acceder 50% off",
+    href: CHECKOUT.travelerPremium,
   },
   {
     name: "VAS Gold",
-    tone: "gold",
+    tone: "gold" as const,
     description: "1er. viaje GRATIS. Tarifa plana TODOS LOS DÍAS. Beneficios exclusivos VAS.",
     oldPrice: "ARS 28.800.-",
     price: "ARS 14.900.-",
-    cta: "Comprá",
+    cta: "Acceder 50% off",
+    href: CHECKOUT.travelerGold,
   },
 ];
 
-const driverPlans = [
+const driverPlans: Plan[] = [
   {
     name: "VAS Standar",
-    tone: "blue",
+    tone: "blue" as const,
     description: "Comisión fija 9% en todos los viajes. Más Beneficios.",
     price: "ARS 0.-",
-    cta: "Registrate",
+    cta: "Unirme",
+    href: PRE_LAUNCH_FORM_URL,
   },
   {
     name: "VAS Premium",
-    tone: "blue",
+    tone: "blue" as const,
     description: "Aplica Lunes a Viernes. Comisión 0%. Beneficios exclusivos VAS.",
     oldPrice: "ARS 29.800.-",
     price: "ARS 14.900.-",
-    cta: "Comprá",
+    cta: "Acceder 50% off",
+    href: CHECKOUT.driverPremium,
   },
   {
     name: "VAS Gold",
-    tone: "gold",
+    tone: "gold" as const,
     description: "Aplica TODOS LOS DÍAS. Comisión 0%. Beneficios exclusivos VAS.",
     oldPrice: "ARS 39.800.-",
     price: "ARS 19.900.-",
-    cta: "Comprá",
+    cta: "Acceder 50% off",
+    href: CHECKOUT.driverGold,
   },
 ];
-
-type Plan = (typeof travelerPlans)[number];
 
 function PlanCard({ plan, variant }: { plan: Plan; variant: "traveler" | "driver" }) {
   return (
@@ -69,7 +89,14 @@ function PlanCard({ plan, variant }: { plan: Plan; variant: "traveler" | "driver
           {plan.oldPrice ? <span className={styles.oldPrice}>{plan.oldPrice}</span> : null}
           <strong>{plan.price}</strong>
         </div>
-        <button>{plan.cta}</button>
+        <a
+          href={plan.href}
+          className={styles.cta}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {plan.cta}
+        </a>
       </div>
     </article>
   );
@@ -84,7 +111,7 @@ export default function PlanOffers() {
             <CarFront size={34} strokeWidth={2.6} />
             <Bike size={30} strokeWidth={2.6} />
           </div>
-          <p>Registrate y podés ganar una membresía</p>
+          <p>{MEMBERSHIP_PROMO_COPY}</p>
         </div>
       </div>
 

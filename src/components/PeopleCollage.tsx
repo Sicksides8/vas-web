@@ -11,7 +11,7 @@ export default function PeopleCollage() {
     <section className={styles.section} aria-label="Comunidad VAS">
       <div className={styles.collage} aria-hidden>
         {peopleImages.map((image, index) => (
-          <div key={image.src} className={`${styles.tile} ${styles[`tile${index + 1}`]}`}>
+          <div key={image.src} className={styles.tile}>
             <Image
               src={image.src}
               alt={image.alt}

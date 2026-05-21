@@ -57,9 +57,14 @@
   font-weight: 700;
   color: var(--white);
   font-size: 1.1rem;
+  text-decoration: none;
 }
 
 .navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background: transparent;
   color: var(--white);
   padding: 0.75rem 2.5rem;
@@ -165,9 +170,14 @@
   padding: 0.75rem 0;
   width: 100%;
   text-align: left;
+  text-decoration: none;
 }
 
 .mobileRegisterBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   margin-top: 0.5rem;
   background: var(--white);
   color: var(--primary);
@@ -177,6 +187,7 @@
   font-weight: 700;
   font-size: 1.05rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
