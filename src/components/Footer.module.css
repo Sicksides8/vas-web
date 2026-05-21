@@ -57,6 +57,16 @@
   line-height: 1.25;
 }
 
+.brandBlock a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brandBlock a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .socialBlock {
   min-width: 160px;
 }

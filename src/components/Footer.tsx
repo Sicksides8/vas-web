@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import { SOCIAL } from "@/config/site-links";
+import { SOCIAL, WHATSAPP_URL } from "@/config/site-links";
 
 const externalLinkProps = {
   target: "_blank" as const,
@@ -20,6 +20,11 @@ export default function Footer() {
             <Image src="/assets/logo.png" alt="VAS" width={170} height={70} className={styles.logo} />
             <div>
               <h2>VAS ARGENTINA</h2>
+              <p>
+                <a href={WHATSAPP_URL} {...externalLinkProps}>
+                  WhatsApp: +54 9 11 6456-0326
+                </a>
+              </p>
             </div>
           </div>
 
