@@ -49,7 +49,7 @@ const travelerPlans: Plan[] = [
 
 const driverPlans: Plan[] = [
   {
-    name: "VAS Standar",
+    name: "VAS Standard",
     tone: "blue" as const,
     description: "Comisión fija 9% en todos los viajes. Más Beneficios.",
     price: "ARS 0.-",

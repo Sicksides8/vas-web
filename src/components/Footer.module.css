@@ -113,6 +113,14 @@
   color: #333;
 }
 
+.tagline {
+  font-family: var(--font-cal-sans), sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  color: var(--primary);
+  margin-top: 0.25rem;
+}
+
 .unsubscribeBtn {
   margin-top: clamp(0.9rem, 2vw, 1.35rem);
   min-width: 150px;

@@ -47,15 +47,15 @@ export default function Footer() {
         <div className={styles.legalGrid}>
           <div className={styles.legalText}>
             <p>
-              En Iké Asistencia estamos comprometidos a brindar servicios de excelencia cumpliendo todos
-              los requisitos aplicables, asimismo a superar la expectativa de nuestros clientes y usuarios.
-              Por ello, trabajamos día a día en mejorar la calidad de nuestros servicios de asistencia.
+              En VAS estamos comprometidos a brindar servicios de excelencia cumpliendo todos los
+              requisitos aplicables, asimismo a superar la expectativa de nuestros usuarios. Por ello,
+              vamos a trabajar día a día en mejorar la calidad de nuestros servicios de viajes.
             </p>
             <p>
-              Contamos con personal especializado, recursos tecnológicos de vanguardia y una amplia red de
-              proveedores para poder afirmar a nuestros clientes: “No se preocupe, su problema queda en
-              nuestras manos”.
+              Contamos con personal especializado y recursos tecnológicos de vanguardia para poder
+              garantizar la mejor experiencia para todos.
             </p>
+            <p className={styles.tagline}>Si vas, vamos.</p>
             <p>
               Defensa de las y los Consumidores, para reclamos <Link href="#">ingrese aquí</Link>
             </p>
