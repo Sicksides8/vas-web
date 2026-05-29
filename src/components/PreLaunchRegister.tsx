@@ -23,7 +23,7 @@ export default function PreLaunchRegister() {
         <h2 id="pre-launch-title">Registro pre-lanzamiento</h2>
         <p className={styles.subtitle}>
           Completá el formulario y accedé al 50% de descuento en tu membresía antes del
-          lanzamiento de la app en julio de 2026.
+          lanzamiento de la app en agosto de 2026.
         </p>
         <a
           href={PRE_LAUNCH_FORM_URL}

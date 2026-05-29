@@ -16,4 +16,5 @@ export const CHECKOUT = {
   driverGold: "https://mpago.la/2DzYjhf",
 } as const;
 
-export const MEMBERSHIP_PROMO_COPY = "Sumate hoy y ganá una membresía";
+export const MEMBERSHIP_PROMO_COPY =
+  "Sumate hoy para acceder a mas beneficios";

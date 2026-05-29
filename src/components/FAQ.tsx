@@ -25,7 +25,7 @@ const faqs: FaqItem[] = [
   {
     question: "¿Cuándo estará disponible la app?",
     answer:
-      "La app de VAS estará disponible en el mes de julio de 2026, pero ya podés registrarte desde esta web. Si ya te registraste en nuestra base de datos, te avisaremos por mail o WhatsApp cuando esté disponible para descargar. También podés seguirnos en nuestras redes sociales para enterarte de todas las novedades.",
+      "La app de VAS estará disponible en el mes de agosto de 2026, pero ya podés registrarte desde esta web. Si ya te registraste en nuestra base de datos, te avisaremos por mail o WhatsApp cuando esté disponible para descargar. También podés seguirnos en nuestras redes sociales para enterarte de todas las novedades.",
   },
   {
     question: "¿Cómo puedo registrarme en VAS?",

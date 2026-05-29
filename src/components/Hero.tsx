@@ -65,6 +65,11 @@ export default function Hero() {
               <span className={styles.bold}>seas conductor o pasajero.</span>
             </p>
 
+            <div className={styles.noticeBadge} role="status" aria-live="polite">
+              <span className={styles.noticeDot} aria-hidden />
+              App disponible a partir del 1 agosto 2026
+            </div>
+
             <div className={styles.ctaGroup}>
               <Link href="#pre-lanzamiento" className={styles.primaryBtn}>
                 {MEMBERSHIP_PROMO_COPY}
